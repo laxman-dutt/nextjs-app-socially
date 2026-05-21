@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    ignoreIssue: [
+      { path: /node_modules\/@uploadthing/ },
+    ],
+  },
 };
 
 export default nextConfig;
